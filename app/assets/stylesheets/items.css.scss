@@ -1,0 +1,197 @@
+a{
+  text-decoration: none;
+  color: $maingray;
+  -webkit-transition: background 0.5s, color 0.5s, border 0.5s;
+  -moz-transition: background 0.5s, color 0.5s, border 0.5s;
+  -o-transition: background 0.5s, color 0.5s, border 0.5s;
+  transition: background 0.5s, color 0.5s, border 0.5s;
+  &:hover{
+    text-decoration: underline;
+    color: lighten($maingray, 4);
+  }
+}
+a.button, input[type="submit"], input[type="reset"], input[type="button"], button{
+  background: $secondarycolor;
+  color: $white;
+  min-width: 120px;
+  height: 30px;
+  display: block;
+  font-size: 14px;
+  line-height: 30px;
+  border: none;
+  text-align: left;
+  padding: 5px 10px;
+  &:hover{
+    background: $maingray;
+    text-decoration: none;
+  }
+  &:active{
+    background: lighten($secondarycolor, 10);
+    text-decoration: none;
+  }
+}
+i{
+  margin: 0 10px 0 0;
+}
+/* headings */
+p{
+  font-size: 14px;
+  line-height: 19px;
+}
+h1{
+  font-size: $h1-font-size;
+  line-height: $h1-font-size+5;
+}
+h2{
+  font-size: $h2-font-size;
+  line-height: $h2-font-size+5;
+}
+h3{
+  font-size: $h3-font-size;
+  line-height: $h3-font-size+5;
+}
+h4{
+  font-size: $h4-font-size;
+  line-height: $h4-font-size+5;
+}
+h5{
+  font-size: $h5-font-size;
+  line-height: $h5-font-size+5;
+}
+h6{
+  font-size: $h6-font-size;
+  line-height: $h6-font-size+5;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="url"], input[type="search"]{
+  height: 25px;
+  line-height: 25px;
+  width: 300px;
+  border: 1px solid darken($white, 20);
+  padding: 0 10px;
+  margin: 0 0 10px;
+  font-family: $open-sans;
+  font-size: 12px;
+  line-height: 15px;
+  &.small{
+    width: 100px;
+  }
+  &.large{
+    width: 500px;
+  }
+}
+input[type="file"]{
+  margin: 0 0 10px;
+}
+input[type="radio"]{
+  margin: 0 0 10px;
+}
+input[type="checkbox"]{
+  margin: 0 0 10px;
+}
+span.checkbox, span.radio{
+  display: block;
+}
+select{
+  width: 320px;
+  margin: 0 0 10px;
+}
+textarea{
+  height: 125px;
+  line-height: 25px;
+  width: 300px;
+  border: 1px solid darken($white, 20);
+  padding: 10px;
+  margin: 0 0 10px;
+  resize: none;
+  font-family: $open-sans;
+  font-size: 12px;
+  line-height: 15px;
+  &.vertical{
+    resize: vertical;
+  }
+}
+label{
+  width: 200px;
+  margin: 0 20px 0 0;
+  text-align: right;
+  display: block;
+  float: left;
+}
+span.error{
+  background: red;
+  display: block;
+  width: 302px;
+  padding: 5px 10px;
+  font-size: 10px;
+  color: $white;
+  margin: -10px 0 10px 220px;
+}
+/* input types */
+table{
+  width: 100%;
+  margin: 10px 0;
+  a{
+    color: $maingray;
+    &:hover{
+      color: $secondarycolor;
+      text-decoration: none;
+    }
+    i{
+      font-size: 16px;
+    }
+  }
+  thead{
+    tr{
+      th{
+        background: $secondarycolor;
+        padding: 10px 10px;
+        color: $white;
+        font-weight: bold;
+        text-align: left;
+      }
+    }
+  }
+  tbody{
+    tr{
+      td{
+        border: none;
+        border-bottom: 1px solid lighten($maingray, 60);
+        border: 1px solid darken($white, 20);
+        padding: 10px 10px;
+        text-align: left;
+      }
+    }
+  }
+}
+/* input types */
+#cke_blog_article_content{
+  margin: 0 0 20px 220px;
+}
+.select2-container-multi{
+  ul.select2-choices{
+    width: 320px;
+    background-image: none;
+    margin: 0 0 20px;
+    li{
+
+    }
+  }
+}
+.select2-drop{
+  margin: -20px 0 0;
+}
+/* Custom elements */
+.panel_right #flash{
+  margin: -20px -20px 20px;
+  #flash_notice{
+    background: green;
+    color: $white;
+    padding: 20px;
+  }
+  #flash_alert, #error{
+    background: red;
+    color: $white;
+    padding: 20px;
+  }
+}

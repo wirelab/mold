@@ -1,0 +1,276 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+/* import */
+@-webkit-keyframes bounceIn{
+  0%  { opacity: 0; -webkit-transform:scale(.3)}
+  50% { opacity:1; -webkit-transform:scale(1.05)}
+  70% { -webkit-transform: scale(.9)}
+  100%{ -webkit-transform:scale(1)}
+}
+@-moz-keyframes bounceIn{
+  0%  { opacity: 0; -moz-transform:scale(.3)}
+  50% { opacity:1; -moz-transform:scale(1.05)}
+  70% { -moz-transform: scale(.9)}
+  100%{ -moz-transform:scale(1)}
+}
+@-ms-keyframes bounceIn{
+  0%  { opacity: 0; -ms-transform:scale(.3)}
+  50% { opacity:1; -ms-transform:scale(1.05)}
+  70% { -ms-transform: scale(.9)}
+  100%{ -ms-transform:scale(1)}
+}
+@keyframes bounceIn{
+  0%  { opacity: 0; transform:scale(.3)}
+  50% { opacity:1; transform:scale(1.05)}
+  70% { transform: scale(.9)}
+  100%{ transform:scale(1)}
+}
+
+
+body{
+  background: $maingray;
+  font-family: $open-sans;
+  font-size: $standard-font-size;
+  line-height: $standard-font-size+4;
+  min-width: 1100px;
+  .main{
+    section.panel_top{
+      background: $maincolor;
+      height: 110px;
+      width: 100%;
+      .logo_holder{
+        width: 259px;
+        height: 110px;
+        border-right: 1px solid darken($maincolor, 5);
+        float: left;
+        a.logo{
+          width: 259px;
+          height: 110px;
+          display: block;
+          text-indent: -9999px;
+          background: image-url("wirelab-admin/admin_logo.png") 20px center no-repeat;
+        }
+      }
+      .profile_holder{
+        float: right;
+        margin: 10px;
+        width: 300px;
+        height: 70px;
+        padding: 10px;
+        .profile_picture{
+          float: left;
+          width: 64px;
+          height: 64px;
+          background: darken($maincolor, 10);
+          padding: 3px;
+          margin: 0 10px 0 0;
+          img{
+            width: 64px;
+            height: 64px;
+          }
+        }
+        .profile_name{
+          float: left;
+          width: 220px;
+          font-weight: bold;
+          padding: 5px 0;
+          a{
+            color: $white;
+          }
+        }
+        .profile_edit{
+          float: left;
+          ul{
+            li{
+              a{
+                background: darken($maincolor, 10);
+                display: block;
+                margin: 0 0 1px;
+                color: $white;
+                padding: 2px 10px;
+                height: 17px;
+                line-height: 17px;
+                font-size: 10px;
+                width: 200px;
+                &:hover{
+                  background: darken($maincolor, 5);
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    section.panel_left{
+      float: left;
+      width: 260px;
+      nav{
+        ul{
+          li{
+            a{
+              display: block;
+              width: 220px;
+              height: 50px;
+              padding: 0 20px;
+              background: $maingray;
+              color: $white;
+              line-height: 50px;
+              border-bottom: 1px solid lighten($maingray, 4);
+
+              &:hover{
+                background: lighten($maingray, 4);
+                text-decoration: none;
+              }
+              &:active{
+                background: $secondarycolor;
+                border-bottom: 1px solid darken($secondarycolor, 10);
+              }
+            }
+            ul{
+              li{
+                a{
+                  background: lighten($maingray, 10);
+                  &:hover{
+                    background: lighten($maingray, 14);
+                  }
+                  &:active{
+                    background: $secondarycolor;
+                    border-bottom: 1px solid darken($secondarycolor, 10);
+                  }
+                }
+              }
+            }
+            &:hover, &:active{
+              ul{
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+    section.panel_left_footer{
+      position: fixed;
+      width: 220px;
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid lighten($maingray, 5);
+      left: 0;
+      bottom: 0;
+      font-size: 9px;
+      a{
+        color: $white;
+      }
+    }
+    section.panel_right{
+      margin-left: 260px;
+      background: image-url("wirelab-admin/white_grunge.png") repeat 0 0;
+      color: $maingray;
+      padding: 20px;
+      header.head{
+        padding: 20px;
+        margin: -20px -20px 20px;
+        background: $white;
+        border-bottom: 1px solid darken($white, 10);
+        h2{
+          line-height: 40px;
+        }
+        input[type="submit"], input[type="reset"], input[type="button"], button, a.button{
+          float: right;
+        }
+      }
+      .content{
+        margin: 0;
+        padding: 20px 20px 10px;
+        background: $white;
+        input[type="submit"], input[type="reset"], input[type="button"], button, a.button{
+          display: inline-block;
+          margin: 0 10px 10px 0;
+        }
+      }
+    }
+  }
+  &.device{
+    background: $secondarycolor;
+    .container{
+      background: $white;
+      width: 400px;
+      margin: 200px auto 0;
+      padding: 20px;
+      color: $maingray;
+      #error_explanation{
+        background: red;
+        margin: 10px 0;
+        padding: 10px;
+        color: $white;
+        h2{
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+      input[type="checkbox"]{
+
+      }
+      label{
+        width: 380px;
+        text-align: left;
+        float: none;
+        display: inline-block;
+        margin: 0 0 5px;
+        &.admin_user_remember_me{
+          width: 300px;
+        }
+      }
+      form{
+        > div{
+          -webkit-animation: bounceIn 0.8s both ease 0s;
+          -moz-animation: bounceIn 0.8s both ease 0s;
+          -ms-animation: bounceIn 0.8s both ease 0s;
+          animation: bounceIn 0.8s both ease 0s;
+          &:nth-child(2){
+            -webkit-animation: bounceIn 0.8s both ease 0.4s;
+            -moz-animation: bounceIn 0.8s both ease 0.4s;
+            -ms-animation: bounceIn 0.8s both ease 0.4s;
+            animation: bounceIn 0.8s both ease 0.4s;
+          }
+          &:nth-child(3){
+            -webkit-animation: bounceIn 0.8s both ease 0.6s;
+            -moz-animation: bounceIn 0.8s both ease 0.6s;
+            -ms-animation: bounceIn 0.8s both ease 0.6s;
+            animation: bounceIn 0.8s both ease 0.6s;
+          }
+          &:nth-child(4){
+            -webkit-animation: bounceIn 0.8s both ease 0.8s;
+            -moz-animation: bounceIn 0.8s both ease 0.8s;
+            -ms-animation: bounceIn 0.8s both ease 0.8s;
+            animation: bounceIn 0.8s both ease 0.8s;
+          }
+          &:nth-child(5){
+            -webkit-animation: bounceIn 0.8s both ease 0.8s;
+            -moz-animation: bounceIn 0.8s both ease 0.8s;
+            -ms-animation: bounceIn 0.8s both ease 0.8s;
+            animation: bounceIn 0.8s both ease 0.8s;
+          }
+          &:nth-child(6){
+            -webkit-animation: bounceIn 0.8s both ease 1s;
+            -moz-animation: bounceIn 0.8s both ease 1s;
+            -ms-animation: bounceIn 0.8s both ease 1s;
+            animation: bounceIn 0.8s both ease 1s;
+          }
+          &:nth-child(7){
+            -webkit-animation: bounceIn 0.8s both ease 1.2s;
+            -moz-animation: bounceIn 0.8s both ease 1.2s;
+            -ms-animation: bounceIn 0.8s both ease 1.2s;
+            animation: bounceIn 0.8s both ease 1.2s;
+          }
+        }
+      }
+      input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="url"], input[type="search"]{
+        width: 378px;
+      }
+      a.button, input[type="submit"], input[type="reset"], input[type="button"], button{
+        margin: 0 0 10px;
+      }
+    }
+  }
+}
