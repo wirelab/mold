@@ -1,0 +1,13 @@
+<div class="profile_holder">
+  <div class="profile_picture">
+    <%= image_tag "http://gravatar.com/avatar/#{Digest::MD5.hexdigest("info@wirelab.nl")}.png?s=64" %>
+  </div>
+  <div class="profile_name">
+    Hans van Dam
+  </div>
+  <div class="profile_edit">
+    <ul>
+      <li><%= link_to "Uitloggen", "#" %></li>
+    </ul>
+  </div>
+</div>

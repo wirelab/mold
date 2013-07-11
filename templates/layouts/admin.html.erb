@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin</title>
+  <%= stylesheet_link_tag "mold", :media => "all" %>
+  <%= csrf_meta_tags %>
+  <%= content_for :admin_javascripts %>
+  <%= content_for :admin_stylesheets %>
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js" type="text/javascript"></script><![endif]-->
+</head>
+<body class="<%= yield (:body_class) %>">
+  <div class="main">
+    <section class="panel_top">
+      <div class="logo_holder">
+        <a href="/admin" class="logo">admin</a>
+      </div>
+      <%= render partial: 'admin/admin_info' %>
+    </section>
+    <section class="panel_left">
+      <%= render partial: 'admin/menu' %>
+    </section>
+    <section class="panel_left_footer">
+    <a href="http://www.wirelab.nl/" target="_blank">Wirelab Admin</a> | Versie 1.0.0 | <a href="http://www.wirelab.nl/" target="_blank">By Wirelab</a>
+    </section>
+    <section class="panel_right">
+      <% unless flash.empty? %>
+      <div id="flash">
+        <% flash.each do |key, value| -%>
+          <div id="flash_<%= key %>"><%= value %></div>
+        <% end -%>
+      </div>
+      <% end %>
+      <%= yield %>
+    </section>
+  </div>
+</body>
+</html>
+
