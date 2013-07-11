@@ -7,6 +7,22 @@ admin interfaces to suite our taste
 
 # Requirements
 
+Nothing
+
+# Usage
+
+See the Wiki
 
 # Installing on Rails
 
+Add to your gemfile:
+
+
+    gem 'mold', github: 'wirelab/mold'
+
+    bundle install
+
+
+If you want to use the default layout:
+
+    bundle exec mold layout
