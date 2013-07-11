@@ -47,7 +47,7 @@ body{
           height: 110px;
           display: block;
           text-indent: -9999px;
-          background: image-url("wirelab-admin/admin_logo.png") 20px center no-repeat;
+          background: image-url("admin_logo.png") 20px center no-repeat;
         }
       }
       .profile_holder{
@@ -164,7 +164,7 @@ body{
     }
     section.panel_right{
       margin-left: 260px;
-      background: image-url("wirelab-admin/white_grunge.png") repeat 0 0;
+      background: image-url("white_grunge.png") repeat 0 0;
       color: $maingray;
       padding: 20px;
       header.head{
