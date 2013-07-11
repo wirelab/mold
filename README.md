@@ -1,4 +1,4 @@
-[![Mold](https://wirelab.s3.amazonaws.com/images/wirelab_logo.png)]
+![Mold](https://wirelab.s3.amazonaws.com/images/wirelab_logo.png)
 
 # Mold
 ## Styling library for admin interfaces
